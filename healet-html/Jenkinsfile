@@ -1,7 +1,7 @@
 pipeline {
 
     agent any
-    
+
     parameters {
         string(name: 'BUILD_NUM_TO_KEEP', defaultValue: '-1', description: 'Keep all builds based on the number')
         string(name: 'BUILD_DAYS_TO_KEEP', defaultValue: '7', description: 'Discard builds older than 7 days')
@@ -26,7 +26,7 @@ pipeline {
     }
 
     environment {
-        GIT_URL = 'https://github.com/samueldison/docker_jenkins-build.git'
+        GIT_URL = 'https://github.com/Orion83-h/jenkinsCI-build.git'
         DOCKERFILE_BASE = 'healet-html/Dockerfile.dev'
         IMAGE_NAME = 'colanta/jewellryshop-website'
         CONTAINER_NAME = "${env.JOB_NAME}-${env.BUILD_NUMBER}"
